@@ -17,7 +17,7 @@ class Uuid
      *
      * @return string e.g. 67f71e26-6d76-4d6b-9b6b-944c28e32c9d
      */
-    public static function v4(boolean $dashes = true): string
+    public static function v4(bool $dashes = true): string
     {
         if ($dashes) {
             $format = '%s-%s-%04x-%04x-%s';
