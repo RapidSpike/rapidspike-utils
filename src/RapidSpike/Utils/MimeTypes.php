@@ -84,6 +84,7 @@ class MimeTypes
             'png' => array('image/png', 'image/x-png'),
             'tiff' => 'image/tiff',
             'tif' => 'image/tiff',
+            'ico' => 'image/x-icon',
             'css' => 'text/css',
             'html' => 'text/html',
             'htm' => 'text/html',
