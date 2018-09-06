@@ -85,6 +85,7 @@ class MimeTypes
             'tiff' => 'image/tiff',
             'tif' => 'image/tiff',
             'ico' => 'image/x-icon',
+            'webp' => 'image/webp',
             'css' => 'text/css',
             'html' => 'text/html',
             'htm' => 'text/html',
@@ -109,7 +110,7 @@ class MimeTypes
             'word' => array('application/msword', 'application/octet-stream'),
             'xl' => 'application/excel',
             'eml' => 'message/rfc822',
-            'json' => array('application/json', 'text/json', ': application/json'),
+            'json' => array('application/json', 'text/json', ': application/json', 'application-json'),
             'font' => array('font/opentype', 'font/ttf', 'application/x-font-woff', 'font/woff', 'application/font-woff', 'font/otf'),
             'svg' => 'image/svg+xml'
         );
