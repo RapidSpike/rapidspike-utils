@@ -127,7 +127,7 @@ class MimeTypes
             'json' => array('application/json', 'text/json', ': application/json', 'application-json'),
             'svg' => 'image/svg+xml',
             'ttf' => array('font/ttf', 'application/x-font-ttf'),
-            'woff' => array('font/woff', 'font/woff2', 'font/x-woff', 'application/x-font-woff', 'application/font-woff', 'application/font-woff2'),
+            'woff' => array('font/woff', 'font/woff2', 'font/x-woff', 'application/x-woff', 'application/x-font-woff', 'application/font-woff', 'application/font-woff2'),
             'opentype' => 'font/opentype',
             'otf' => 'font/otf'
         );
