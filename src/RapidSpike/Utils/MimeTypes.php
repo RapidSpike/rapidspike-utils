@@ -85,6 +85,8 @@ class MimeTypes
             'rm' => 'audio/x-pn-realaudio',
             'rpm' => 'audio/x-pn-realaudio-plugin',
             'ra' => 'audio/x-realaudio',
+            'ogg' => 'audio/ogg',
+            'webm' => array('audio/webm', 'video/webm'),
             'rv' => 'video/vnd.rn-realvideo',
             'wav' => array('audio/x-wav', 'audio/wave', 'audio/wav'),
             'bmp' => array('image/bmp', 'image/x-windows-bmp'),
@@ -95,7 +97,7 @@ class MimeTypes
             'png' => array('image/png', 'image/x-png'),
             'tiff' => 'image/tiff',
             'tif' => 'image/tiff',
-            'ico' => 'image/x-icon',
+            'ico' => array('image/x-icon', 'vnd.microsoft.icon'),
             'webp' => 'image/webp',
             'css' => 'text/css',
             'html' => 'text/html',
@@ -123,16 +125,10 @@ class MimeTypes
             'eml' => 'message/rfc822',
             'json' => array('application/json', 'text/json', ': application/json', 'application-json'),
             'svg' => 'image/svg+xml',
-            'font' => array(
-                'font/opentype',
-                'font/ttf',
-                'font/otf',
-                'font/woff',
-                'font/woff2',
-                'application/x-font-woff',
-                'application/font-woff',
-                'application/font-woff2'
-            ),
+            'ttf' => array('font/ttf', 'application/x-font-ttf'),
+            'woff' => array('font/woff', 'font/woff2', 'font/x-woff', 'application/x-font-woff', 'application/font-woff', 'application/font-woff2'),
+            'opentype' => 'font/opentype',
+            'otf' => 'font/otf'
         );
 
         // Recursively look through the mimes and search out
