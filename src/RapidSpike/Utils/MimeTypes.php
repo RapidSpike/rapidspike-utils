@@ -20,7 +20,18 @@ class MimeTypes
         $mimes = array(
             'hqx' => 'application/mac-binhex40',
             'cpt' => 'application/mac-compactpro',
-            'csv' => array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel'),
+            'csv' => array(
+                'text/x-comma-separated-values',
+                'text/comma-separated-values',
+                'application/octet-stream',
+                'application/vnd.ms-excel',
+                'application/x-csv',
+                'text/x-csv',
+                'text/csv',
+                'application/csv',
+                'application/excel',
+                'application/vnd.msexcel'
+            ),
             'bin' => 'application/macbinary',
             'dms' => 'application/octet-stream',
             'lha' => 'application/octet-stream',
@@ -111,8 +122,17 @@ class MimeTypes
             'xl' => 'application/excel',
             'eml' => 'message/rfc822',
             'json' => array('application/json', 'text/json', ': application/json', 'application-json'),
-            'font' => array('font/opentype', 'font/ttf', 'application/x-font-woff', 'font/woff', 'application/font-woff', 'font/otf'),
-            'svg' => 'image/svg+xml'
+            'svg' => 'image/svg+xml',
+            'font' => array(
+                'font/opentype',
+                'font/ttf',
+                'font/otf',
+                'font/woff',
+                'font/woff2',
+                'application/x-font-woff',
+                'application/font-woff',
+                'application/font-woff2'
+            ),
         );
 
         // Recursively look through the mimes and search out
