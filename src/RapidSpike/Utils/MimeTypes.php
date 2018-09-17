@@ -108,7 +108,7 @@ class MimeTypes
             'log' => array('text/plain', 'text/x-log'),
             'rtx' => 'text/richtext',
             'rtf' => 'text/rtf',
-            'xml' => 'text/xml',
+            'xml' => array('text/xml', 'application/xml'),
             'xsl' => 'text/xml',
             'mpeg' => 'video/mpeg',
             'mpg' => 'video/mpeg',
