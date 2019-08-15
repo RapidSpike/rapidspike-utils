@@ -129,6 +129,19 @@ class Url implements TargetInterface
     }
 
     /**
+     * Return just the scheme and host as the domain
+     *
+     * @return string
+     */
+    public function getDomain()
+    {
+        $scheme = !empty($this->arrUrl['scheme']) ? $this->arrUrl['scheme'] . '://' : '';
+        $host = !empty($this->arrUrl['host']) ? $this->arrUrl['host'] : '';
+
+        return "{$scheme}{$host}";
+    }
+
+    /**
      * Return the scheme
      *
      * @return string
