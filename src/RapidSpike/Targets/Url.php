@@ -32,13 +32,14 @@ class Url implements TargetInterface
      * Validates a supplied URL, parses it and rebuilds it
      *
      * @param string $url
+     * @param bool $filter_validate
      *
      * @throws \InvalidArgumentException
      */
-    public function __construct($url)
+    public function __construct($url, bool $filter_validate = true)
     {
         // Validate URL
-        if (filter_var($url, FILTER_VALIDATE_URL) === false) {
+        if ($filter_validate === true && filter_var($url, FILTER_VALIDATE_URL) === false) {
             throw new \InvalidArgumentException('Invalid URL supplied in ' . __CLASS__);
         }
 
