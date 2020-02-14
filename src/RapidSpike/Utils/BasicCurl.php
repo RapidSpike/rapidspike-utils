@@ -194,13 +194,15 @@ class BasicCurl
      */
     public function getCurlInfo($requested_info = false)
     {
-        if ($requested_info !== false && !isset($this->arrCurlInfo[$requested_info])) {
-            throw new \APIException\InternalServerError('Uh oh, a problem has occurred! Please contact support@rapidspike.com', 'BC-GCI-0001');
+        if ($requested_info !== false) {
+            if (isset($this->arrCurlInfo[$requested_info])) {
+                return $this->arrCurlInfo[$requested_info];
+            } else {
+                return false;
+            }
         } else {
             return $this->arrCurlInfo;
         }
-
-        return $this->arrCurlInfo;
     }
 
 }
