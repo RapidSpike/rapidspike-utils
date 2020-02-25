@@ -144,7 +144,7 @@ class BasicCurl
     public function setOption(array $arrOptions)
     {
         foreach ($arrOptions as $key => $val) {
-            if (isset($this->arrCurlOptions[$key]) && !in_array($key, self::BLOCKED_OPTIONS)) {
+            if (!in_array($key, self::BLOCKED_OPTIONS)) {
                 $this->arrCurlOptions[$key] = $val;
             }
         }
