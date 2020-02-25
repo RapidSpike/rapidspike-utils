@@ -151,6 +151,16 @@ class BasicCurl
     }
 
     /**
+     * Get the options set to the class
+     *
+     * @return array
+     */
+    public function getOptions(): array
+    {
+        return $this->arrCurlOptions;
+    }
+
+    /**
      * Gets the response HTML.
      *
      * @return string
