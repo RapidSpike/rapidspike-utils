@@ -118,7 +118,6 @@ class BasicCurl
             CURLOPT_MAXREDIRS => 10,
             CURLOPT_USERAGENT => 'RapidSpike Uptime Monitor Bot v0.1.0 - http://www.rapidspike.com/',
             CURLOPT_IPRESOLVE => CURL_IPRESOLVE_V4,
-            CURLOPT_COOKIEJAR => tempnam(sys_get_temp_dir(), "/cookie_{$Url->getHost()}.txt")
         );
     }
 
