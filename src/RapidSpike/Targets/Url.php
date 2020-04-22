@@ -63,10 +63,10 @@ class Url implements TargetInterface
         try {
             $BasicCurl = new BasicCurl($this);
             $BasicCurl->setOption([
-                'CURLOPT_TIMEOUT' => 30,
-                'CURLOPT_CONNECTTIMEOUT' => 30,
-                'CURLOPT_FOLLOWLOCATION' => true,
-                'CURLOPT_MAXREDIRS' => 5
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_CONNECTTIMEOUT => 30,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_MAXREDIRS => 5
             ]);
 
             $BasicCurl->makeRequest();
