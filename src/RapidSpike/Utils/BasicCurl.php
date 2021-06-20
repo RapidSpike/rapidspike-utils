@@ -126,13 +126,20 @@ class BasicCurl
      */
     public function makeRequest()
     {
-        $this->CurlHandler = curl_init();
-        curl_setopt($this->CurlHandler, CURLOPT_URL, $this->Url->getUrl());
-        curl_setopt_array($this->CurlHandler, $this->arrCurlOptions);
+        try {
+            $this->CurlHandler = curl_init();
+            curl_setopt($this->CurlHandler, CURLOPT_URL, $this->Url->getUrl());
+            curl_setopt_array($this->CurlHandler, $this->arrCurlOptions);
 
-        $this->html = curl_exec($this->CurlHandler);
-        $this->arrCurlInfo = curl_getinfo($this->CurlHandler);
-        $this->err_num = curl_errno($this->CurlHandler);
+            $this->html = curl_exec($this->CurlHandler);
+            $this->arrCurlInfo = curl_getinfo($this->CurlHandler);
+            $this->err_num = curl_errno($this->CurlHandler);
+        } catch (\Exception $e) {
+            error_log('Exception caught in ' . __METHOD__);
+            error_log('Curl target ' . $this->Url->getUrl());
+            error_log('Curl options ' . json_encode($this->arrCurlOptions));
+            throw $e;
+        }
     }
 
     /**
