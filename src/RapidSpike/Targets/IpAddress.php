@@ -37,6 +37,11 @@ class IpAddress implements TargetInterface
      */
     public function __construct($ip_address)
     {
+        $port = false;
+        if (substr_count($ip_address, ':') === 1) {
+            list($ip_address, $port) = explode(':', $ip_address);
+        }
+
         if (filter_var($ip_address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4) !== false) {
             $this->type = self::IPV4;
         } else if (filter_var($ip_address, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6) !== false) {
@@ -45,7 +50,7 @@ class IpAddress implements TargetInterface
             throw new \InvalidArgumentException('Supplied IP address is invalid');
         }
 
-        $this->ip_address = $ip_address;
+        $this->ip_address = ($port) ? vsprintf('%s:%s', [$ip_address, $port]) : $ip_address;
     }
 
     /**
