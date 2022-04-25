@@ -12,7 +12,7 @@ use RapidSpike\Targets\Url;
 class BasicCurl
 {
 
-    const BLOCKED_OPTIONS = [CURLOPT_SSL_VERIFYPEER, CURLOPT_RETURNTRANSFER, CURLOPT_USERAGENT];
+    const BLOCKED_OPTIONS = [CURLOPT_SSL_VERIFYPEER, CURLOPT_RETURNTRANSFER];
 
     /**
      * The URL object for the website we're interacting with
